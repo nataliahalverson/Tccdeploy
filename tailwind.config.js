@@ -1,10 +1,7 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -44,7 +41,7 @@ const config: Config = {
           700: '#15803d',
           800: '#166534',
           900: '#145231',
-        },
+        }
       },
       backgroundImage: {
         'gradient-hero': 'linear-gradient(135deg, #0f172a 0%, #0e7490 52%, #c026d3 100%)',
@@ -64,15 +61,14 @@ const config: Config = {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
+        }
       },
       boxShadow: {
-        'soft': '0 2px 8px rgba(0, 0, 0, 0.08)',
-        'medium': '0 4px 16px rgba(0, 0, 0, 0.12)',
-        'hard': '0 8px 32px rgba(0, 0, 0, 0.16)',
-      },
-    },
+        soft: '0 2px 8px rgba(0, 0, 0, 0.08)',
+        medium: '0 4px 16px rgba(0, 0, 0, 0.12)',
+        hard: '0 8px 32px rgba(0, 0, 0, 0.16)',
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
-export default config
