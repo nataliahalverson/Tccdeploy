@@ -4,6 +4,7 @@
 # command para apenas: "npm ci && npm run build".
 
 [build]
+  base = "."
   command = "npm run build"
   publish = ".next"
 
