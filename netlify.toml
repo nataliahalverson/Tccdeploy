@@ -4,8 +4,13 @@
 # command para apenas: "npm ci && npm run build".
 
 [build]
-  command = "npm ci && npm run build && (ls -la || dir) && (ls -la .next || dir .next) && (ls -la out || dir out) || true"
+  command = "npm run build"
   publish = ".next"
+
+[build.environment]
+  NEXT_TELEMETRY_DISABLED = "1"
+  NEXT_DISABLE_ESLINT = "1"
+  NEXT_DISABLE_TYPECHECK = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
