@@ -1,0 +1,112 @@
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #dfefff;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #004b6b;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+
+.btnPrimary,
+.btnSecondary {
+  display: inline-block;
+  padding: 0.875rem 1.875rem;
+  background-color: #ffd700;
+  color: #003b58;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btnPrimary:hover,
+.btnSecondary:hover {
+  background-color: #ffb300;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.destinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.destino {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destino:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.destino h4 {
+  color: #003b58;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.destino p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btnSecondary {
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .intro {
+    padding: 2rem 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.75rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .destinos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

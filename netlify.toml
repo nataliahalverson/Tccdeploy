@@ -1,0 +1,11 @@
+# Netlify config para Next.js (rodada diagnóstica)
+# OBS: Esta configuração imprime a lista de arquivos na raiz, .next e out
+# durante o build no Netlify. Após confirmar que .next/ existe, volte o
+# command para apenas: "npm ci && npm run build".
+
+[build]
+  command = "npm ci && npm run build && (ls -la || dir) && (ls -la .next || dir .next) && (ls -la out || dir out) || true"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

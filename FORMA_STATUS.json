@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2025-10-23T19:55:44.290Z",
+  "frontend": {
+    "stack": {
+      "vite": false,
+      "next": true
+    },
+    "pages": {
+      "expected": [
+        "home",
+        "pacotes",
+        "contato"
+      ],
+      "found": [
+        "home",
+        "contato",
+        "pacotes"
+      ],
+      "count": 3
+    },
+    "a11yMain": true,
+    "palette": {
+      "blueHits": 33,
+      "yellowHits": 3
+    },
+    "notes": [
+      "Next.js detected (compatible with Vite/React requirements)"
+    ]
+  },
+  "backend": {
+    "entry": "src/server/index.ts",
+    "hasTsconfig": true,
+    "httpOnlyCookie": true,
+    "corsCredentials": true,
+    "endpoints": {
+      "files": [
+        "src/server/routes/auth.ts",
+        "src/server/routes/posts.ts",
+        "src/server/routes/profile.ts"
+      ],
+      "count": 11
+    }
+  },
+  "database": {
+    "hasPrisma": true,
+    "pointEventUniqueByMetaHash": true,
+    "hasUserIdIndex": true,
+    "migrationFiles": [
+      "prisma/migrations/20251023_add_user_post_points/migration.sql"
+    ],
+    "sanitizedDatabaseUrl": "# ⚠️ NUNCA COMMITAR ESTE ARQUIVO\r\n# Este é o .env local com credenciais reais do AlwaysData\r\n\r\n# ===== DATABASE =====\r\nDATABASE_URL=\"mysql:***@mysql-facerec.alwaysdata.net:3306/facerec_form\"\r\n\r\n# ===== API =====\r\nNEXT_PUBLIC_API_BASE_URL=\"http://localhost:4000\"\r\n\r\n# ===== BACKEND (Express) =====\r\nWEB_ORIGIN=\"http://localhost:3000\"\r\nJWT_SECRET=\"your-secret-key-change-in-production-$(date +%s)\"\r\nCOOKIE_NAME=\"access_token\"\r\nNODE_ENV=\"development\"\r\nPORT=4000\r\n\r\n# ===== AUTH =====\r\nAUTH_SECRET=\"another-secret-key-for-nextauth-if-needed\"\r\n"
+  },
+  "deploy": {
+    "vercelIntent": true,
+    "hints": [
+      "Add \"vercel\" script to package.json for CI/CD"
+    ]
+  },
+  "tests": {
+    "happyPathExists": true,
+    "testCount": 9,
+    "hasAxe": true,
+    "screenshots": 3
+  },
+  "score": 100,
+  "semaphore": "green",
+  "weights": {
+    "frontend.stack": 5,
+    "frontend.pages": 10,
+    "frontend.a11y": 10,
+    "frontend.palette": 5,
+    "backend.entry": 5,
+    "backend.typescript": 5,
+    "backend.httpOnlyCookie": 10,
+    "backend.corsCredentials": 5,
+    "backend.endpoints": 5,
+    "database.prisma": 5,
+    "database.unique": 10,
+    "database.indexes": 5,
+    "database.migrations": 5,
+    "database.env": 0,
+    "deploy.vercel": 5,
+    "tests.e2e": 7,
+    "tests.axe": 2,
+    "tests.screenshots": 1
+  }
+}

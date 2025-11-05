@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2025-10-23T19:55:30.312Z",
+  "docs": {
+    "expected": [],
+    "present": [
+      "INDEX.md",
+      "SCOPE_ONE_PAGER.md",
+      "EXECUTIVE_SUMMARY.md",
+      "MIGRATION_GUIDE.md",
+      "MVP_IMPLEMENTATION_STATUS.md",
+      "MVP_DELIVERY.md",
+      "DELIVERY_SUMMARY.md",
+      ".env.example"
+    ],
+    "missing": [],
+    "score": 100
+  },
+  "frontend": {
+    "pagesWithMain": 0,
+    "focusRing": true,
+    "scrollMt": true,
+    "rotaReserva": true,
+    "noLocalStorageToken": true,
+    "httpClientCredentialsInclude": true,
+    "notes": [],
+    "score": 100
+  },
+  "backend": {
+    "serverEntry": "src/server/index.ts",
+    "routesFound": [
+      "src/server/routes/auth.ts",
+      "src/server/routes/posts.ts",
+      "src/server/routes/profile.ts"
+    ],
+    "endpointsCount": 11,
+    "httpOnlyCookie": false,
+    "corsCredentials": true,
+    "hasHealth": true,
+    "score": 75
+  },
+  "database": {
+    "hasPointEventUniqueMetaHash": true,
+    "hasUserIdIndex": true,
+    "migrationFiles": [
+      "prisma/migrations/20251022_add_user_post_points.sql",
+      "prisma/migrations/20251023_add_user_post_points/migration.sql"
+    ],
+    "sanitizedDatabaseUrl": "mysql://facerec:***@mysql-facerec.alwaysdata.net:3306/facerec_form",
+    "score": 100
+  },
+  "tests": {
+    "happyPathExists": true,
+    "testCount": 9,
+    "hasAxe": true,
+    "score": 100
+  },
+  "totalScore": 94,
+  "semaphore": "green"
+}

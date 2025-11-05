@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-slate-100 text-slate-900;
+  }
+
+  h1 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+
+  /* Melhor quebra de linha para títulos longos */
+  h1, h2 {
+    text-wrap: balance;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Skip link para navegação por teclado */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 16px;
+    padding: 8px 12px;
+    background: #ffffff;
+    color: #0f172a; /* slate-900 */
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: top 0.2s ease;
+    z-index: 1000;
+  }
+  .skip-link:focus-visible {
+    top: 16px;
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+
+  /* Destaque de seleção do texto mais visível */
+  ::selection {
+    @apply bg-primary-200 text-slate-900;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .form-section {
+    @apply bg-white shadow-soft rounded-2xl border border-slate-100;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-soft hover:shadow-medium transition-all duration-300 p-6;
+  }
+
+  .card-interactive {
+    @apply card hover:translate-y-[-4px] cursor-pointer;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .section {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Utilitário para textos longos com melhor legibilidade */
+  .content-readable {
+    @apply leading-relaxed text-slate-700;
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l border-slate-200;
+  }
+
+  .timeline-item::before {
+    @apply absolute left-0 top-1.5 -translate-x-1/2 w-3 h-3 bg-primary-500 rounded-full;
+    content: '';
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Ajustes finos para o hero em telas muito estreitas */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    font-size: 1.0625rem;
+  }
+
+  .hero-buttons > * {
+    width: 100%;
+  }
+}
+
+@layer components {
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900 rounded-lg;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Performance utilities: melhora fluidez do scroll e de animações */
+@layer utilities {
+  /* Não renderiza conteúdo fora da tela até entrar no viewport, evitando custo de pintura/layout */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 800px; /* tamanho estimado para evitar layout shift ao revelar */
+  }
+
+  /* Hints para GPU em elementos animados (Framer Motion) */
+  .wc-transform { will-change: transform; }
+  .wc-opacity { will-change: opacity; }
+}

@@ -1,0 +1,247 @@
+# ENV Summary
+
+## Variáveis por contexto
+### frontend
+- NEXT_PUBLIC_API_BASE_URL → 1 referência(s)
+- NEXT_PUBLIC_BACKEND_URL → 1 referência(s)
+- NODE_ENV → 2 referência(s)
+
+### backend
+- COOKIE_NAME → 3 referência(s)
+- CORS_ALLOWED_ORIGINS → 1 referência(s)
+- DATABASE_URL → 1 referência(s)
+- JWT_SECRET → 2 referência(s)
+- NODE_ENV → 8 referência(s)
+- PORT → 1 referência(s)
+- PUBLIC_BACKEND_URL → 1 referência(s)
+- WEB_ORIGIN → 2 referência(s)
+- WEB_ORIGINS → 2 referência(s)
+
+### prisma
+- DATABASE_URL → 1 referência(s)
+
+### tests
+- E2E_BASE_URL → 2 referência(s)
+- PLAYWRIGHT_BASE_PATH → 1 referência(s)
+
+### build
+- PLAYWRIGHT_BASE_URL → 1 referência(s)
+
+### other
+- VAR → 1 referência(s)
+
+
+## URLs hardcoded (atenção)
+### Código (src/backend/prisma/build)
+- FORMA_STATUS.json:51 → http://localhost:4000\
+- FORMA_STATUS.json:51 → http://localhost:3000\
+- next-env.d.ts:5 → https://nextjs.org/docs/basic-features/typescript
+- package-lock.json:61 → https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz
+- package-lock.json:69 → https://github.com/sponsors/sindresorhus
+- package-lock.json:74 → https://registry.npmjs.org/@axe-core/playwright/-/playwright-4.11.0.tgz
+- package-lock.json:87 → https://registry.npmjs.org/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz
+- package-lock.json:100 → https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz
+- package-lock.json:111 → https://registry.npmjs.org/@emnapi/core/-/core-1.6.0.tgz
+- package-lock.json:123 → https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.6.0.tgz
+- package-lock.json:134 → https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz
+- package-lock.json:145 → https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.25.11.tgz
+- package-lock.json:162 → https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.25.11.tgz
+- package-lock.json:179 → https://registry.npmjs.org/@esbuild/android-arm64/-/android-arm64-0.25.11.tgz
+- package-lock.json:196 → https://registry.npmjs.org/@esbuild/android-x64/-/android-x64-0.25.11.tgz
+- package-lock.json:213 → https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.25.11.tgz
+- package-lock.json:230 → https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.25.11.tgz
+- package-lock.json:247 → https://registry.npmjs.org/@esbuild/freebsd-arm64/-/freebsd-arm64-0.25.11.tgz
+- package-lock.json:264 → https://registry.npmjs.org/@esbuild/freebsd-x64/-/freebsd-x64-0.25.11.tgz
+- package-lock.json:281 → https://registry.npmjs.org/@esbuild/linux-arm/-/linux-arm-0.25.11.tgz
+- package-lock.json:298 → https://registry.npmjs.org/@esbuild/linux-arm64/-/linux-arm64-0.25.11.tgz
+- package-lock.json:315 → https://registry.npmjs.org/@esbuild/linux-ia32/-/linux-ia32-0.25.11.tgz
+- package-lock.json:332 → https://registry.npmjs.org/@esbuild/linux-loong64/-/linux-loong64-0.25.11.tgz
+- package-lock.json:349 → https://registry.npmjs.org/@esbuild/linux-mips64el/-/linux-mips64el-0.25.11.tgz
+- package-lock.json:366 → https://registry.npmjs.org/@esbuild/linux-ppc64/-/linux-ppc64-0.25.11.tgz
+- package-lock.json:383 → https://registry.npmjs.org/@esbuild/linux-riscv64/-/linux-riscv64-0.25.11.tgz
+- package-lock.json:400 → https://registry.npmjs.org/@esbuild/linux-s390x/-/linux-s390x-0.25.11.tgz
+- package-lock.json:417 → https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.11.tgz
+- package-lock.json:434 → https://registry.npmjs.org/@esbuild/netbsd-arm64/-/netbsd-arm64-0.25.11.tgz
+- package-lock.json:451 → https://registry.npmjs.org/@esbuild/netbsd-x64/-/netbsd-x64-0.25.11.tgz
+- package-lock.json:468 → https://registry.npmjs.org/@esbuild/openbsd-arm64/-/openbsd-arm64-0.25.11.tgz
+- package-lock.json:485 → https://registry.npmjs.org/@esbuild/openbsd-x64/-/openbsd-x64-0.25.11.tgz
+- package-lock.json:502 → https://registry.npmjs.org/@esbuild/openharmony-arm64/-/openharmony-arm64-0.25.11.tgz
+- package-lock.json:519 → https://registry.npmjs.org/@esbuild/sunos-x64/-/sunos-x64-0.25.11.tgz
+- package-lock.json:536 → https://registry.npmjs.org/@esbuild/win32-arm64/-/win32-arm64-0.25.11.tgz
+- package-lock.json:553 → https://registry.npmjs.org/@esbuild/win32-ia32/-/win32-ia32-0.25.11.tgz
+- package-lock.json:570 → https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.11.tgz
+- package-lock.json:587 → https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.9.0.tgz
+- package-lock.json:598 → https://opencollective.com/eslint
+- package-lock.json:606 → https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.12.2.tgz
+- package-lock.json:616 → https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-2.1.4.tgz
+- package-lock.json:635 → https://opencollective.com/eslint
+- package-lock.json:640 → https://registry.npmjs.org/@eslint/js/-/js-8.57.1.tgz
+- package-lock.json:650 → https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.13.0.tgz
+- package-lock.json:666 → https://registry.npmjs.org/@humanwhocodes/module-importer/-/module-importer-1.0.1.tgz
+- package-lock.json:675 → https://github.com/sponsors/nzakas
+- package-lock.json:680 → https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz
+- package-lock.json:688 → https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz
+- package-lock.json:706 → https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz
+- package-lock.json:714 → https://github.com/chalk/ansi-regex?sponsor=1
+- package-lock.json:719 → https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz
+- package-lock.json:730 → https://github.com/chalk/strip-ansi?sponsor=1
+- package-lock.json:735 → https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz
+- package-lock.json:746 → https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz
+- package-lock.json:756 → https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz
+- package-lock.json:763 → https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz
+- package-lock.json:774 → https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz
+- package-lock.json:787 → https://registry.npmjs.org/@next/env/-/env-14.2.5.tgz
+- package-lock.json:793 → https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.5.tgz
+- package-lock.json:803 → https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.5.tgz
+- package-lock.json:819 → https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-14.2.5.tgz
+- package-lock.json:835 → https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-14.2.5.tgz
+- package-lock.json:851 → https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-14.2.5.tgz
+- package-lock.json:867 → https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.2.5.tgz
+- package-lock.json:883 → https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.5.tgz
+- package-lock.json:899 → https://registry.npmjs.org/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-14.2.5.tgz
+- package-lock.json:915 → https://registry.npmjs.org/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-14.2.5.tgz
+- package-lock.json:931 → https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.5.tgz
+- package-lock.json:947 → https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz
+- package-lock.json:961 → https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz
+- package-lock.json:971 → https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz
+- package-lock.json:985 → https://registry.npmjs.org/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz
+- package-lock.json:995 → https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz
+- package-lock.json:1006 → https://registry.npmjs.org/@playwright/test/-/test-1.56.1.tgz
+- package-lock.json:1022 → https://registry.npmjs.org/@prisma/client/-/client-5.22.0.tgz
+- package-lock.json:1040 → https://registry.npmjs.org/@prisma/debug/-/debug-5.22.0.tgz
+- package-lock.json:1047 → https://registry.npmjs.org/@prisma/engines/-/engines-5.22.0.tgz
+- package-lock.json:1061 → https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2.tgz
+- package-lock.json:1068 → https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.22.0.tgz
+- package-lock.json:1080 → https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.22.0.tgz
+- package-lock.json:1090 → https://registry.npmjs.org/@rtsao/scc/-/scc-1.1.0.tgz
+- package-lock.json:1097 → https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.14.0.tgz
+- package-lock.json:1104 → https://registry.npmjs.org/@swc/counter/-/counter-0.1.3.tgz
+- package-lock.json:1110 → https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.5.tgz
+- package-lock.json:1120 → https://registry.npmjs.org/@tsconfig/node10/-/node10-1.0.11.tgz
+- package-lock.json:1127 → https://registry.npmjs.org/@tsconfig/node12/-/node12-1.0.11.tgz
+- package-lock.json:1134 → https://registry.npmjs.org/@tsconfig/node14/-/node14-1.0.3.tgz
+- package-lock.json:1141 → https://registry.npmjs.org/@tsconfig/node16/-/node16-1.0.4.tgz
+- package-lock.json:1148 → https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz
+- package-lock.json:1159 → https://registry.npmjs.org/@types/bcryptjs/-/bcryptjs-2.4.6.tgz
+- package-lock.json:1166 → https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.6.tgz
+- package-lock.json:1177 → https://registry.npmjs.org/@types/compression/-/compression-1.8.1.tgz
+- package-lock.json:1188 → https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz
+- package-lock.json:1198 → https://registry.npmjs.org/@types/cookie-parser/-/cookie-parser-1.4.9.tgz
+- package-lock.json:1208 → https://registry.npmjs.org/@types/cors/-/cors-2.8.19.tgz
+- package-lock.json:1218 → https://registry.npmjs.org/@types/express/-/express-4.17.23.tgz
+- package-lock.json:1231 → https://registry.npmjs.org/@types/express-rate-limit/-/express-rate-limit-6.0.2.tgz
+- package-lock.json:1242 → https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.19.7.tgz
+- package-lock.json:1255 → https://registry.npmjs.org/@types/http-errors/-/http-errors-2.0.5.tgz
+- package-lock.json:1262 → https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz
+- package-lock.json:1269 → https://registry.npmjs.org/@types/jsonwebtoken/-/jsonwebtoken-9.0.10.tgz
+- package-lock.json:1280 → https://registry.npmjs.org/@types/junit-report-builder/-/junit-report-builder-3.0.2.tgz
+- package-lock.json:1287 → https://registry.npmjs.org/@types/mime/-/mime-1.3.5.tgz
+- package-lock.json:1294 → https://registry.npmjs.org/@types/ms/-/ms-2.1.0.tgz
+- package-lock.json:1301 → https://registry.npmjs.org/@types/node/-/node-20.14.9.tgz
+- package-lock.json:1311 → https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.15.tgz
+- package-lock.json:1318 → https://registry.npmjs.org/@types/qs/-/qs-6.14.0.tgz
+- package-lock.json:1325 → https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.7.tgz
+- package-lock.json:1332 → https://registry.npmjs.org/@types/react/-/react-18.2.74.tgz
+- package-lock.json:1343 → https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.24.tgz
+- package-lock.json:1353 → https://registry.npmjs.org/@types/sanitize-html/-/sanitize-html-2.16.0.tgz
+- package-lock.json:1363 → https://registry.npmjs.org/@types/send/-/send-1.2.0.tgz
+- package-lock.json:1373 → https://registry.npmjs.org/@types/serve-static/-/serve-static-1.15.9.tgz
+- package-lock.json:1385 → https://registry.npmjs.org/@types/send/-/send-0.17.5.tgz
+- package-lock.json:1396 → https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.2.0.tgz
+- package-lock.json:1412 → https://opencollective.com/typescript-eslint
+- package-lock.json:1425 → https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-7.2.0.tgz
+- package-lock.json:1438 → https://opencollective.com/typescript-eslint
+- package-lock.json:1443 → https://registry.npmjs.org/@typescript-eslint/types/-/types-7.2.0.tgz
+- package-lock.json:1452 → https://opencollective.com/typescript-eslint
+- package-lock.json:1457 → https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-7.2.0.tgz
+- package-lock.json:1476 → https://opencollective.com/typescript-eslint
+- package-lock.json:1486 → https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.2.tgz
+- package-lock.json:1496 → https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz
+- package-lock.json:1507 → https://github.com/sponsors/isaacs
+- package-lock.json:1512 → https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-7.2.0.tgz
+- package-lock.json:1525 → https://opencollective.com/typescript-eslint
+- package-lock.json:1530 → https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.3.0.tgz
+- package-lock.json:1537 → https://registry.npmjs.org/@unrs/resolver-binding-android-arm-eabi/-/resolver-binding-android-arm-eabi-1.11.1.tgz
+- package-lock.json:1551 → https://registry.npmjs.org/@unrs/resolver-binding-android-arm64/-/resolver-binding-android-arm64-1.11.1.tgz
+- package-lock.json:1565 → https://registry.npmjs.org/@unrs/resolver-binding-darwin-arm64/-/resolver-binding-darwin-arm64-1.11.1.tgz
+- package-lock.json:1579 → https://registry.npmjs.org/@unrs/resolver-binding-darwin-x64/-/resolver-binding-darwin-x64-1.11.1.tgz
+- package-lock.json:1593 → https://registry.npmjs.org/@unrs/resolver-binding-freebsd-x64/-/resolver-binding-freebsd-x64-1.11.1.tgz
+- package-lock.json:1607 → https://registry.npmjs.org/@unrs/resolver-binding-linux-arm-gnueabihf/-/resolver-binding-linux-arm-gnueabihf-1.11.1.tgz
+- package-lock.json:1621 → https://registry.npmjs.org/@unrs/resolver-binding-linux-arm-musleabihf/-/resolver-binding-linux-arm-musleabihf-1.11.1.tgz
+- package-lock.json:1635 → https://registry.npmjs.org/@unrs/resolver-binding-linux-arm64-gnu/-/resolver-binding-linux-arm64-gnu-1.11.1.tgz
+- package-lock.json:1649 → https://registry.npmjs.org/@unrs/resolver-binding-linux-arm64-musl/-/resolver-binding-linux-arm64-musl-1.11.1.tgz
+- package-lock.json:1663 → https://registry.npmjs.org/@unrs/resolver-binding-linux-ppc64-gnu/-/resolver-binding-linux-ppc64-gnu-1.11.1.tgz
+- package-lock.json:1677 → https://registry.npmjs.org/@unrs/resolver-binding-linux-riscv64-gnu/-/resolver-binding-linux-riscv64-gnu-1.11.1.tgz
+- package-lock.json:1691 → https://registry.npmjs.org/@unrs/resolver-binding-linux-riscv64-musl/-/resolver-binding-linux-riscv64-musl-1.11.1.tgz
+- package-lock.json:1705 → https://registry.npmjs.org/@unrs/resolver-binding-linux-s390x-gnu/-/resolver-binding-linux-s390x-gnu-1.11.1.tgz
+- package-lock.json:1719 → https://registry.npmjs.org/@unrs/resolver-binding-linux-x64-gnu/-/resolver-binding-linux-x64-gnu-1.11.1.tgz
+- package-lock.json:1733 → https://registry.npmjs.org/@unrs/resolver-binding-linux-x64-musl/-/resolver-binding-linux-x64-musl-1.11.1.tgz
+- package-lock.json:1747 → https://registry.npmjs.org/@unrs/resolver-binding-wasm32-wasi/-/resolver-binding-wasm32-wasi-1.11.1.tgz
+- package-lock.json:1764 → https://registry.npmjs.org/@unrs/resolver-binding-win32-arm64-msvc/-/resolver-binding-win32-arm64-msvc-1.11.1.tgz
+- package-lock.json:1778 → https://registry.npmjs.org/@unrs/resolver-binding-win32-ia32-msvc/-/resolver-binding-win32-ia32-msvc-1.11.1.tgz
+- package-lock.json:1792 → https://registry.npmjs.org/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.11.1.tgz
+- package-lock.json:1806 → https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz
+- package-lock.json:1819 → https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz
+- package-lock.json:1828 → https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz
+- package-lock.json:1841 → https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz
+- package-lock.json:1851 → https://registry.npmjs.org/acorn-walk/-/acorn-walk-8.3.4.tgz
+- package-lock.json:1864 → https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz
+- package-lock.json:1876 → https://github.com/sponsors/epoberezkin
+- package-lock.json:1881 → https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz
+- package-lock.json:1891 → https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz
+- package-lock.json:1902 → https://github.com/chalk/ansi-styles?sponsor=1
+- package-lock.json:1907 → https://registry.npmjs.org/any-promise/-/any-promise-1.3.0.tgz
+- package-lock.json:1914 → https://registry.npmjs.org/anymatch/-/anymatch-3.1.3.tgz
+- package-lock.json:1928 → https://registry.npmjs.org/arg/-/arg-5.0.2.tgz
+- package-lock.json:1935 → https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz
+- package-lock.json:1942 → https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz
+- package-lock.json:1952 → https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.2.tgz
+- package-lock.json:1964 → https://github.com/sponsors/ljharb
+- package-lock.json:1969 → https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz
+- package-lock.json:1975 → https://registry.npmjs.org/array-includes/-/array-includes-3.1.9.tgz
+- package-lock.json:1993 → https://github.com/sponsors/ljharb
+- package-lock.json:1998 → https://registry.npmjs.org/array-union/-/array-union-2.1.0.tgz
+- package-lock.json:2008 → https://registry.npmjs.org/array.prototype.findlast/-/array.prototype.findlast-1.2.5.tgz
+- package-lock.json:2024 → https://github.com/sponsors/ljharb
+- package-lock.json:2029 → https://registry.npmjs.org/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.6.tgz
+- package-lock.json:2046 → https://github.com/sponsors/ljharb
+- package-lock.json:2051 → https://registry.npmjs.org/array.prototype.flat/-/array.prototype.flat-1.3.3.tgz
+- package-lock.json:2065 → https://github.com/sponsors/ljharb
+- package-lock.json:2070 → https://registry.npmjs.org/array.prototype.flatmap/-/array.prototype.flatmap-1.3.3.tgz
+- package-lock.json:2084 → https://github.com/sponsors/ljharb
+- package-lock.json:2089 → https://registry.npmjs.org/array.prototype.tosorted/-/array.prototype.tosorted-1.1.4.tgz
+- package-lock.json:2106 → https://registry.npmjs.org/arraybuffer.prototype.slice/-/arraybuffer.prototype.slice-1.0.4.tgz
+- package-lock.json:2123 → https://github.com/sponsors/ljharb
+- package-lock.json:2128 → https://registry.npmjs.org/ast-types-flow/-/ast-types-flow-0.0.8.tgz
+- package-lock.json:2135 → https://registry.npmjs.org/async-function/-/async-function-1.0.0.tgz
+- package-lock.json:2145 → https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.21.tgz
+- package-lock.json:2151 → https://opencollective.com/postcss/
+- package-lock.json:2155 → https://tidelift.com/funding/github/npm/autoprefixer
+- package-lock.json:2159 → https://github.com/sponsors/ai
+- package-lock.json:2183 → https://registry.npmjs.org/available-typed-arrays/-/available-typed-arrays-1.0.7.tgz
+- package-lock.json:2194 → https://github.com/sponsors/ljharb
+- package-lock.json:2199 → https://registry.npmjs.org/axe-core/-/axe-core-4.11.0.tgz
+- package-lock.json:2209 → https://registry.npmjs.org/axe-html-reporter/-/axe-html-reporter-2.2.11.tgz
+- package-lock.json:2225 → https://registry.npmjs.org/axe-playwright/-/axe-playwright-2.2.2.tgz
+- package-lock.json:2242 → https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz
+- package-lock.json:2252 → https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz
+- package-lock.json:2259 → https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.8.19.tgz
+- package-lock.json:2269 → https://registry.npmjs.org/bcryptjs/-/bcryptjs-2.4.3.tgz
+- package-lock.json:2275 → https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.3.0.tgz
+- package-lock.json:2283 → https://github.com/sponsors/sindresorhus
+- package-lock.json:2288 → https://registry.npmjs.org/body-parser/-/body-parser-1.20.3.tgz
+- package-lock.json:2312 → https://registry.npmjs.org/debug/-/debug-2.6.9.tgz
+- package-lock.json:2321 → https://registry.npmjs.org/ms/-/ms-2.0.0.tgz
+- package-lock.json:2327 → https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.12.tgz
+- ... +625 omitidos
+
+### Testes
+- tests/e2e/happy-path.spec.ts:8 → http://localhost:3000/api)
+- tests/e2e/happy-path.spec.ts:19 → http://localhost:3000
+- tests/e2e/happy-path.spec.ts:193 → http://localhost:3000
+
+
+---
+Notas:
+- Prefira usar variáveis de ambiente no lugar de URLs hardcoded em código.
+- Em produção, evite `localhost` em configurações de CORS e URLs públicas.
