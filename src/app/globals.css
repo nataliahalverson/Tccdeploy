@@ -9,7 +9,9 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-slate-50 to-slate-100 text-slate-900;
+    @apply text-slate-900;
+    background-color: #f8fafc; /* slate-50 */
+    background-image: linear-gradient(to bottom right, #f8fafc, #f1f5f9); /* slate-50 to slate-100 */
   }
 
   h1 {
