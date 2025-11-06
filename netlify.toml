@@ -8,6 +8,7 @@
   NEXT_DISABLE_ESLINT = "1"
   NEXT_DISABLE_TYPECHECK = "1"
   NODE_VERSION = "18"
+  NPM_FLAGS = "--include=dev"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
