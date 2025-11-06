@@ -6,7 +6,8 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
-    "postinstall": "prisma generate"
+  "postinstall": "npm run prisma:generate",
+  "prisma:generate": "prisma generate --schema ./prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",

@@ -1,0 +1,128 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  name      String
+  password  String     // bcrypt hashed
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  posts      Post[]
+  pointEvents PointEvent[]
+  reservations ReservationRequest[]
+
+  @@map("User")
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  content   String   @db.LongText
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@map("Post")
+}
+
+// PointEvent
+// Evento de pontos para gamificação.
+// UNIQUE constraint em (userId, type, metaHash) previne duplicatas.
+//
+// Exemplos:
+// - POST_CREATED: usuário publica post (10 pts)
+// - PROFILE_COMPLETED: usuário completa perfil (25 pts)
+// - DAILY_CHECKIN: daily check-in (5 pts)
+//
+// metaHash = SHA256(userId + postId + type) detecta re-envios
+model PointEvent {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  type      String   // 'POST_CREATED' | 'PROFILE_COMPLETED' | 'DAILY_CHECKIN'
+  points    Int
+  
+  // Metadados: { postId, ... }
+  meta      Json?
+  
+  // Hash para idempotência: SHA256(userId + postId + type)
+  metaHash  String
+  
+  createdAt DateTime @default(now())
+
+  @@unique([userId, type, metaHash])
+  @@index([userId])
+  @@index([createdAt])
+  @@map("PointEvent")
+}
+
+model ReservationRequest {
+  id          String              @id @default(cuid())
+  userId      String
+  user        User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  slug        String?
+  destination String?
+  tripStart   DateTime?
+  tripEnd     DateTime?
+  tripDuration String?
+  budget      String?
+  status      ReservationStatus   @default(PENDING)
+  formData    Json
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  payments    ReservationPayment[]
+
+  @@index([userId])
+  @@map("ReservationRequest")
+}
+
+model ReservationPayment {
+  id            String            @id @default(cuid())
+  reservationId String
+  reservation   ReservationRequest @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+  method        PaymentMethod
+  amount        Decimal?          @db.Decimal(10, 2)
+  currency      String            @default("BRL")
+  details       Json?
+  status        PaymentStatus     @default(CONFIRMED)
+  paidAt        DateTime          @default(now())
+  receiptCode   String            @unique
+  createdAt     DateTime          @default(now())
+
+  @@index([reservationId])
+  @@map("ReservationPayment")
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  PAID
+  CANCELLED
+}
+
+enum PaymentMethod {
+  PIX
+  CREDIT_CARD
+  BOLETO
+}
+
+enum PaymentStatus {
+  PENDING
+  CONFIRMED
+  FAILED
+}
