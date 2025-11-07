@@ -13,7 +13,7 @@ import Badge from '@/components/Badge'
 import Modal from '@/components/Modal'
 import { useAuth } from '@/contexts/AuthContext'
 import { httpClient } from '@/lib/httpClient'
-import { rotaContato, rotaPacote, rotaReservaCompleta } from '@/lib/links'
+import { rotaContato, rotaPacote, rotaPacotes, rotaRoteiro } from '@/lib/links'
 import { Mail, Hash, UserCircle2, ShieldCheck, Compass, LogOut, ClipboardList, CreditCard, Receipt, QrCode } from 'lucide-react'
 
 type ReservationStatus = 'PENDING' | 'CONFIRMED' | 'PAID' | 'CANCELLED'
@@ -428,7 +428,7 @@ export default function PerfilPageClient() {
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <Link
-                        href={rotaPacote()}
+                        href={rotaPacotes}
                         className="focus-ring inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-md backdrop-blur hover:bg-white/20"
                       >
                         <Compass size={16} />
@@ -531,7 +531,7 @@ export default function PerfilPageClient() {
                         </div>
                       </div>
                       <Link
-                        href={rotaReservaCompleta()}
+                        href={rotaRoteiro()}
                         className="focus-ring inline-flex items-center gap-2 rounded-lg border border-primary-200 bg-white px-4 py-2 text-sm font-semibold text-primary-700 shadow-sm transition-all duration-200 hover:bg-primary-50"
                       >
                         <Compass size={16} />
