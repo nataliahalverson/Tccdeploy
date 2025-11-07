@@ -2,12 +2,15 @@
   "name": "pedagopass-api",
   "private": true,
   "engines": { "node": ">=18" },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
-  "postinstall": "npm run prisma:generate",
-  "prisma:generate": "prisma generate --schema ./prisma/schema.prisma"
+    "postinstall": "npm run prisma:generate",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",

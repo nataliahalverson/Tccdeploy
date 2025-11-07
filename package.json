@@ -17,7 +17,8 @@
     "scan:env": "node tools/scan-env.mjs",
     "netlify:check": "node scripts/netlify-check.mjs",
     "status:mvp": "tsx tools/mvpStatus.ts",
-    "status:forma": "tsx tools/formaStatus.ts"
+    "status:forma": "tsx tools/formaStatus.ts",
+    "postinstall": "prisma generate --schema=backend/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^5.7.1",
