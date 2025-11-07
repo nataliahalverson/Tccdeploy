@@ -253,8 +253,8 @@ export default function HomePageClient() {
                     Reservar agora
                     <ArrowRight size={20} />
                   </Link>
-                  <Link href={rotaPacote()} className={secondaryCtaClass}>
-                    Ver detalhes do pacote
+                  <Link href={rotaRoteiro()} className={secondaryCtaClass}>
+                    Ver roteiro completo
                     <ArrowRight size={20} />
                   </Link>
                 </motion.div>
