@@ -11,13 +11,22 @@ import {
   PhoneCall,
   LogIn,
 } from 'lucide-react'
+import {
+  rotaContato,
+  rotaLogin,
+  rotaPacotes,
+  rotaPoliticaPrivacidade,
+  rotaCancelamentos,
+  rotaFaq,
+  rotaTermos,
+} from '@/lib/links'
 
 export default function Footer() {
   const quickLinks = [
     { href: '/inicio', label: 'Início', icon: Home },
-  { href: '/pacotes', label: 'Pacotes', icon: Map },
-    { href: '/contato', label: 'Contato', icon: PhoneCall },
-    { href: '/login', label: 'Entrar', icon: LogIn },
+    { href: rotaPacotes, label: 'Pacotes', icon: Map },
+    { href: rotaContato, label: 'Contato', icon: PhoneCall },
+    { href: rotaLogin, label: 'Entrar', icon: LogIn },
   ]
 
   return (
@@ -75,7 +84,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pacotes" className="focus-ring text-slate-400 hover:text-primary-400 transition-colors">
+                <Link href={rotaPacotes} className="focus-ring text-slate-400 hover:text-primary-400 transition-colors">
                   Pacotes
                 </Link>
               </li>
@@ -85,7 +94,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contato" className="focus-ring text-slate-400 hover:text-primary-400 transition-colors">
+                <Link href={rotaContato} className="focus-ring text-slate-400 hover:text-primary-400 transition-colors">
                   Contato
                 </Link>
               </li>
@@ -97,24 +106,24 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Suporte</h4>
             <ul className="space-y-2 text-slate-400 text-sm">
               <li>
-                <a href="#" className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaFaq} className="focus-ring hover:text-primary-400 transition-colors">
                   Perguntas Frequentes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaPoliticaPrivacidade} className="focus-ring hover:text-primary-400 transition-colors">
                   Políticas de Privacidade
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaTermos} className="focus-ring hover:text-primary-400 transition-colors">
                   Termos de Serviço
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaCancelamentos} className="focus-ring hover:text-primary-400 transition-colors">
                   Cancelamentos
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

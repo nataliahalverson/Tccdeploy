@@ -7,12 +7,11 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Button from '@/components/Button'
 import Card from '@/components/Card'
-import Input from '@/components/Input'
 import Badge from '@/components/Badge'
 import FaqSection from '@/components/FaqSection'
 import NextStepsPanel from '@/components/NextStepsPanel'
 import Main from '@/components/Main'
-import { reservaHref, rotaPacote, rotaReserva } from '@/lib/links'
+import { reservaHref, rotaPacote, rotaRoteiro } from '@/lib/links'
 import { pacotes } from '@/lib/pacotes'
 
 const fadeInUp = {
@@ -152,7 +151,7 @@ export default function HomePageClient() {
         status: { label: 'Pré-reserva aberta', variant: 'success' as const },
         tempoRestante: 'Faltam 15 semanas',
         slug: p?.slug ?? 'florianopolis-sc',
-        cta: 'Ver detalhes do pacote',
+        cta: 'Ver opções de roteiro',
       }
     })(),
     (() => {
@@ -175,8 +174,8 @@ export default function HomePageClient() {
     {
       title: 'Escolha seu destino',
       description: 'Compare pacotes, roteiros e condições especiais para cada turma.',
-      actionLabel: 'Ver detalhes do pacote',
-      href: rotaPacote(),
+      actionLabel: 'Ver opções de roteiro',
+      href: rotaRoteiro(),
       icon: 'calendar' as const,
     },
     {
@@ -201,12 +200,6 @@ export default function HomePageClient() {
       icon: 'message' as const,
     },
   ]
-
-  const handleNewsletter = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const data = new FormData(e.currentTarget)
-    console.log('newsletter:', data.get('email'))
-  }
 
   const primaryCtaClass =
     'focus-ring inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary-600 to-accent-600 px-6 py-3 text-lg font-semibold text-white shadow-lg transition-all duration-200 hover:from-primary-500 hover:to-accent-500 hover:shadow-xl active:scale-95 sm:w-auto'
@@ -437,38 +430,6 @@ export default function HomePageClient() {
           subtitle="Clique nas perguntas para ver os detalhes. Estamos prontos para ajudar a turma em cada etapa da viagem."
           items={faqs}
         />
-
-        <section
-          id="newsletter"
-          className="section bg-gradient-to-br from-slate-900 to-slate-950 text-white cv-auto"
-          aria-labelledby="news-title"
-        >
-          <div className="container-wide">
-            <motion.div
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={localStagger}
-              className="text-center"
-            >
-              <motion.h2 id="news-title" variants={localFadeInUp} className="mb-4 text-3xl font-bold md:text-4xl">
-                Receba ofertas e novidades
-              </motion.h2>
-              <motion.p variants={localFadeInUp} className="mx-auto mb-6 max-w-2xl text-white/80">
-                Cadastre seu email e receba descontos exclusivos e novidades sobre os melhores pacotes.
-              </motion.p>
-              <motion.div variants={localFadeInUp} className="mx-auto max-w-xl">
-                <form onSubmit={handleNewsletter} className="flex flex-col gap-3 sm:flex-row">
-                  <Input type="email" name="email" required placeholder="Seu melhor email" className="flex-1 bg-white" />
-                  <Button type="submit" variant="primary" className="whitespace-nowrap">
-                    Quero receber
-                  </Button>
-                </form>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-
         <section id="por-que" className="section bg-gradient-to-br from-slate-50 to-white cv-auto" aria-labelledby="porque-title">
           <div className="container-wide">
             <motion.div
