@@ -24,6 +24,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@prisma/client": "^5.7.1",
     "autoprefixer": "^10.4.21",
     "bcryptjs": "^2.4.3",
@@ -49,7 +50,6 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
     "@playwright/test": "^1.49.0",
-    "@types/bcryptjs": "^2.4.6",
     "@types/compression": "^1.7.5",
     "@types/cookie-parser": "^1.4.8",
     "@types/cors": "^2.8.19",
