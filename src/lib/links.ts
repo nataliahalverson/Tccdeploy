@@ -6,11 +6,11 @@ export const rotaReserva = (slug: string = PACOTE_SLUG) => `${rotaPacote(slug)}#
 export const rotaReservaCompleta = (slug?: string) => (slug ? `/reserva?roteiro=${slug}` : '/reserva')
 export const rotaRoteiro = (slug?: string) => (slug ? `/roteiro#roteiro-${slug}` : '/roteiro')
 export const rotaContato = '/contato'
-export const rotaFaq = '/faq'
-export const rotaTermos = '/termos'
-export const rotaPoliticaPrivacidade = '/politica-de-privacidade'
-export const rotaCancelamentos = '/cancelamentos'
-
+export const rotaSuporte = '/suporte'
+export const rotaSuporteFaq = `${rotaSuporte}#faq`
+export const rotaSuportePolitica = `${rotaSuporte}#privacidade`
+export const rotaSuporteTermos = `${rotaSuporte}#termos`
+export const rotaSuporteCancelamentos = `${rotaSuporte}#cancelamentos`
 // Rotas de autenticação
 export const rotaLogin = '/login'
 export const rotaRegister = '/registro'

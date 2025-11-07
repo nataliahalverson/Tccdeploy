@@ -11,7 +11,7 @@ import Badge from '@/components/Badge'
 import FaqSection from '@/components/FaqSection'
 import NextStepsPanel from '@/components/NextStepsPanel'
 import Main from '@/components/Main'
-import { reservaHref, rotaPacote, rotaRoteiro } from '@/lib/links'
+import { rotaPacote, rotaRoteiro } from '@/lib/links'
 import { pacotes } from '@/lib/pacotes'
 
 const fadeInUp = {
@@ -195,8 +195,8 @@ export default function HomePageClient() {
     {
       title: 'Confirme o grupo',
       description: 'Finalize reservas e receba o kit completo de preparação da viagem.',
-      actionLabel: 'Ir para reserva',
-      href: reservaHref(),
+      actionLabel: 'Ir para roteiro',
+      href: rotaRoteiro(),
       icon: 'message' as const,
     },
   ]

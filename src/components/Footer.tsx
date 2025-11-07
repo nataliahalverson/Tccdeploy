@@ -15,10 +15,10 @@ import {
   rotaContato,
   rotaLogin,
   rotaPacotes,
-  rotaPoliticaPrivacidade,
-  rotaCancelamentos,
-  rotaFaq,
-  rotaTermos,
+  rotaSuporteFaq,
+  rotaSuportePolitica,
+  rotaSuporteTermos,
+  rotaSuporteCancelamentos,
 } from '@/lib/links'
 
 export default function Footer() {
@@ -106,22 +106,22 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Suporte</h4>
             <ul className="space-y-2 text-slate-400 text-sm">
               <li>
-                <Link href={rotaFaq} className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaSuporteFaq} className="focus-ring hover:text-primary-400 transition-colors">
                   Perguntas Frequentes
                 </Link>
               </li>
               <li>
-                <Link href={rotaPoliticaPrivacidade} className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaSuportePolitica} className="focus-ring hover:text-primary-400 transition-colors">
                   Políticas de Privacidade
                 </Link>
               </li>
               <li>
-                <Link href={rotaTermos} className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaSuporteTermos} className="focus-ring hover:text-primary-400 transition-colors">
                   Termos de Serviço
                 </Link>
               </li>
               <li>
-                <Link href={rotaCancelamentos} className="focus-ring hover:text-primary-400 transition-colors">
+                <Link href={rotaSuporteCancelamentos} className="focus-ring hover:text-primary-400 transition-colors">
                   Cancelamentos
                 </Link>
               </li>
